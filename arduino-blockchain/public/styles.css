@@ -1,0 +1,95 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container and Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Header */
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #4A90E2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Sensor Cards */
+.sensor-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sensor-card {
+    background: #F8F9FA;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 45%;
+    animation: slideIn 1s ease-out;
+}
+
+.sensor-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sensor-card p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #4A90E2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-out;
+}

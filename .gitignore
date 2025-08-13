@@ -1,0 +1,48 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build output
+build/
+dist/
+out/
+
+# Truffle & Blockchain artifacts
+*.abi
+*.bin
+
+# Local blockchain data (Ganache)
+*.db
+chaindata/
+keystore/
+
+# Environment & secrets
+.env
+*.pem
+*.key
+*.crt
+
+# Sensor data & temp JSON logs
+sensorData.json
+*.log
+*.tmp
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Coverage / Test output
+coverage/
+test-results/
+
+# Arduino specific temp/build files
+*.hex
+*.elf
+*.eep
+*.o
+
+# Public uploads (if not needed in repo)
+public/uploads/

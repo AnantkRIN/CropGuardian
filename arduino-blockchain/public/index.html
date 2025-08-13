@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Sensor Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Real-Time Sensor Data</h1>
+    </header>
+
+    <main>
+      <section class="sensor-info">
+        <div class="sensor-card" id="temperature-card">
+          <h2>Temperature</h2>
+          <p id="temperature">Loading...</p>
+        </div>
+        <div class="sensor-card" id="humidity-card">
+          <h2>Humidity</h2>
+          <p id="humidity">Loading...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Include Socket.IO Client -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Your Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
