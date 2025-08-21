@@ -35,7 +35,7 @@ ensureSensorDataFile();
 
 
 const port = new SerialPort({
-  path: 'COM13',
+  path: 'COM13',      
   baudRate: 9600,
 });
 const parser = port.pipe(new ReadlineParser({ delimiter: '\n' }));
