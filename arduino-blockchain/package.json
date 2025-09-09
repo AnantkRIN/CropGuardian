@@ -1,8 +1,10 @@
 {
   "name": "arduino-blockchain",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "readSensor.js",
   "scripts": {
+    "start": "node readSensor.js",
+    "dev": "nodemon readSensor.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,7 +16,12 @@
     "readline": "^1.3.0",
     "serialport": "^13.0.0",
     "socket.io": "^4.8.1",
-    "web3": "^1.10.0"
+    "web3": "^1.10.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
   },
   "directories": {
     "test": "test"

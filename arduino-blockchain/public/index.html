@@ -3,33 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real-Time Sensor Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <title>🌱 EcoSense - Smart Agriculture Monitor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  
   <div class="container">
-    <header>
-      <h1>Real-Time Sensor Data</h1>
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">🌱</div>
+        <h1>EcoSense</h1>
+      </div>
+      <p class="subtitle">Real-Time Environmental Monitoring</p>
+      <button class="refresh-btn" id="refresh-btn">
+        <span class="refresh-icon">🔄</span>
+        <span class="refresh-text">Refresh Data</span>
+      </button>
     </header>
 
-    <main>
-      <section class="sensor-info">
-        <div class="sensor-card" id="temperature-card">
-          <h2>Temperature</h2>
-          <p id="temperature">Loading...</p>
+    <main class="main-content">
+      <div class="sensor-grid">
+        <div class="sensor-card temperature-card" id="temperature-card">
+          <div class="card-header">
+            <div class="icon">🌡️</div>
+            <h2>Temperature</h2>
+          </div>
+          <div class="value-container">
+            <span class="value" id="temperature">--</span>
+            <span class="unit">°C</span>
+          </div>
+          <div class="status-indicator" id="temp-status"></div>
         </div>
-        <div class="sensor-card" id="humidity-card">
-          <h2>Humidity</h2>
-          <p id="humidity">Loading...</p>
+
+        <div class="sensor-card humidity-card" id="humidity-card">
+          <div class="card-header">
+            <div class="icon">💧</div>
+            <h2>Humidity</h2>
+          </div>
+          <div class="value-container">
+            <span class="value" id="humidity">--</span>
+            <span class="unit">%</span>
+          </div>
+          <div class="status-indicator" id="humidity-status"></div>
         </div>
-      </section>
+      </div>
+
+      <div class="environmental-info">
+        <div class="info-card">
+          <h3>🌿 Crop Health Status</h3>
+          <div class="health-indicator" id="crop-health">
+            <div class="health-bar">
+              <div class="health-fill" id="health-fill"></div>
+            </div>
+            <span class="health-text">Optimal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="connection-status">
+        <div class="status-dot" id="connection-dot"></div>
+        <span id="connection-text">Connecting to Arduino...</span>
+      </div>
     </main>
   </div>
 
   <!-- Include Socket.IO Client -->
   <script src="/socket.io/socket.io.js"></script>
-
   <!-- Your Custom Script -->
   <script src="script.js"></script>
 </body>
