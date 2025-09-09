@@ -25,10 +25,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 4. Syntax check
+      # 4. Syntax check (just checks for JS errors)
       - name: Syntax check
-        run: node --check readSensor.js
+        run: node --check arduino-blockchain/readSensor.js
 
-      # 5. Smoke test
-      - name: Run app (non-blocking)
-        run: node readSensor.js || echo "App ran for test"
+      # 5. Smoke test (run app but never fail)
+      - name: Smoke test
+        run: |
+          node arduino-blockchain/readSensor.js || true
+
