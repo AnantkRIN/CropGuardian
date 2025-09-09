@@ -27,7 +27,7 @@ jobs:
 
       # 4. Syntax check
       - name: Syntax check
-        run: node --check reaSensor.js
+        run: node --check readSensor.js
 
       # 5. Smoke test
       - name: Run app (non-blocking)
