@@ -1,0 +1,34 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]   # change to "master" if your repo’s default branch is master
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Get repo code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Install Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Syntax check
+      - name: Syntax check
+        run: node --check reaSensor.js
+
+      # 5. Smoke test
+      - name: Run app (non-blocking)
+        run: node reaSensor.js || echo "App ran for test"
