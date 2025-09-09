@@ -31,4 +31,4 @@ jobs:
 
       # 5. Smoke test
       - name: Run app (non-blocking)
-        run: node reaSensor.js || echo "App ran for test"
+        run: node readSensor.js || echo "App ran for test"
